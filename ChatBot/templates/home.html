@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SuchiLAW</title>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <style>
@@ -231,7 +231,7 @@ function botResponse(userInp) {
   //const delay = msgText.split(" ").length * 100;
   var msgText="Didn't Understood try again..";
   
-  var userdata= '{"sender":"Patil92","message":"'+String(userInp)+'"}';
+  var userdata= '{"sender":"Sanjay","message":"'+String(userInp)+'"}';
   
   //userdata = eval(userdata);
   $.parseJSON(userdata);
@@ -347,11 +347,9 @@ function botResponse(userInp) {
               }
               */
               
-            },error: function(err){
-              
-            msgText = err;
-            console.log("Error Inside Inside AJAX"+err);
-          }
+            }, error: function (xhr, status, error) {
+        console.error("Error Inside AJAX", xhr);
+    }
        });
   
   
@@ -545,12 +543,12 @@ escape = function (str) {
 
       <div class="msg-bubble">
         <div class="msg-info">
-          <div class="msg-info-name">Patil</div>
+          <div class="msg-info-name">Sanjay Kandula</div>
           <div class="msg-info-time">12:45</div>
         </div>
 
         <div class="msg-text">
-          Hi, welcome to Chat Advisory! Ask me Queries I will Find for You. 😄
+          Hi, welcome to Chat Advisory! Ask me Queries I will Find for You. 
         </div>
       </div>
     </div>

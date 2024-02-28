@@ -51,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'ChatBot.urls'
@@ -132,4 +134,9 @@ CORS_ORIGIN_WHITELIST = [
 ]
 CORS_ORIGIN_REGEX_WHITELIST = [
     'http://localhost:5005', 'http://localhost:8000'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://127.0.0.1:8000' # your frontend's URL
+\
 ]
